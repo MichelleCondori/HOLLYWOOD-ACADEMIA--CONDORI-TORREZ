@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logotipo{
+
+    margin-top:1%;
+    margin-bottom: 1%;
+    margin-left: 45%;
+    align-items: center;
+    display: flex;
+}
+
+.header__sticky{
+    display: flex;
+    background-color: #D4AF37;
+   flex-direction: row;
+}
+
+.nav__link{
+    
+    display: flexlox;
+    width: 100px;
+    margin: 105px;
+    background-color:#D4AF37;
+    grid-template-rows: auto ;
+    grid-template-columns: 48%  48% ;
+    font-family: 'Times New Roman';
+    color: aliceblue;
+
+}
+
+.t-1{
+    margin-top: 20px;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color:#D4AF37;
+}
+
+.t-3{
+    margin-top: 25px;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 18px;
+    color:#4e4a4a;
+}
+
+.t-4{
+    margin-top: 10px;
+    font-family: "montserrat" ;
+    letter-spacing: 1px;
+    margin-left: 30px;
+    color: #e8d082;
+}
+
+.parrafo{
+    font-size: 16px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: rgb(112, 122, 131);
+}
+
+.sub-parrafo{
+    font-size: 14px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    font-family: "Montserrat";
+    color: darkgrey;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 47% 47% ;
+    grid-template-rows: auto ;
+    gap: 1em;
+}
+
+.grid div{
+    background:#ffffff ;
+    padding: 1em
+
+}
+
+.grid div:hover {
+    border: 1px solid #D4AF37 ; 
+}
+
+.actors{
+    display: flexbox;
+    
+}
+
+.galeria-container{
+    display: grid;
+    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    grid-auto-rows: 160px;
+    grid-template-areas: repeat(2, 1fr);
+    gap: 8em;
+}
+
+.gallery__img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.div__gallery{
+    position: relative;
+    cursor: pointer;
+    overflow:hidden
+}
+
+.div__gallery::before{
+    content: "Lorem";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0%;
+    background-color: #e8d082;
+    transform: scale(0);
+    transition: transform 4s;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5;
+}
+
+.div__gallery:hover::before{
+    transform: scale(0) rotate(360deg);
+}
+
+@media (max-width:760px){
+    .galeria-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:auto ;
+    }
+    .div__gallery::before{
+        font-size: 1rem;
+    }
+}
+
+
+.tittle{
+    display: grid;
+    margin-top: 20px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: rgb(255, 251, 241);
+}
+
+.F-contacto {
+    margin-top: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: grid;
+    background-color: #D4AF37;
+    align-self: center;
+
+}
+
+.registro{
+    display: grid;
+    width: 400px;
+    height: 400px;
+    position: static;
+    text-align: center;
+    font-size: large;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-bottom: 5px;
+    font-family: 'Libre Bodoni';
+    color:#ffffff;
+
+}
+
+
+.terminos{
+    text-align: center;
+    font-size: large;
+    color: rgb(255, 251, 241);
+}
+
+
+.enviar{
+     border: none;
+     padding: 2px;
+     margin-bottom: 5px;
+     width: 30%;
+     text-align: center;
+}
+
+.linea {
+
+    background-color: rgba(0, 0, 0, 0.548);
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
+.footer__a{
+
+    position: static;
+    top: 0px;
+    z-index: 10;
+    text-decoration: none;
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+}
+
+@media all and (min-width:400px) {
+
+    .header__sticky{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    }
+
+    .nav__link{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    }
+
+    .logotipo{
+        align-items:flex-end;
+    }
+
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+        }
+
+    .galeria-container{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+
+    }
+
+    .registro, .F-contacto{
+        grid-template-columns:repeat(auto-fit,  minmax(300px, 2fr));
+
+    }
+
+}
